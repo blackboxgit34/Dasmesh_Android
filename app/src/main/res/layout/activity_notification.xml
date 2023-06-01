@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_cream"
+    tools:context=".ui.ui.notification.NotificationActivity">
+
+    <include layout="@layout/toolbar_layout"
+        android:id="@+id/toolbar"/>
+
+    <TextView
+        android:id="@+id/tvMarkAllRead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:textSize="@dimen/font_14"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/white"
+        android:drawableStart="@drawable/ic_real_all"
+        android:visibility="gone"
+        android:drawableTint="@color/primary_orange"
+        android:drawablePadding="@dimen/margin_xx"
+        android:layout_marginEnd="@dimen/margin_x"
+        android:padding="@dimen/margin_v"
+        android:text="Mark all as Read"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNotifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/notification_list_adapter"
+        android:layout_below="@id/tvMarkAllRead"/>
+
+</RelativeLayout>

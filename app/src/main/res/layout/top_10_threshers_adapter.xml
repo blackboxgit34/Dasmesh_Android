@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/upperTableRows"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_x"
+        android:orientation="horizontal"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/vehName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/font_11_new"
+            android:layout_marginEnd="@dimen/margin_v"
+            android:layout_gravity="center_vertical"
+            android:text="8000948"/>
+        <com.github.mikephil.charting.charts.HorizontalBarChart
+            android:id="@+id/workingHours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </androidx.appcompat.widget.LinearLayoutCompat>

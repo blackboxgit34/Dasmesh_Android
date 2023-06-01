@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout"
+        android:id="@+id/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            />
+        <RelativeLayout
+            android:id="@+id/rlFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <AutoCompleteTextView
+                android:id="@+id/actv_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_curve_white_box"
+                android:fontFamily="@font/poppins_regular"
+                android:imeOptions="actionDone"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/margin_x"
+                android:focusableInTouchMode="true"
+                android:drawableStart="@drawable/ic_menu_search_24"
+                android:drawableTint="@color/dark_grey"
+                android:layout_marginStart="@dimen/margin_x"
+                android:layout_marginEnd="@dimen/margin_x"
+                android:hint="Enter a location"
+                android:padding="@dimen/margin_v"
+                android:textColor="@color/black"
+                android:textColorHint="@color/med_grey"
+                android:textSize="@dimen/font_11_new" />
+            <TextView
+                android:id="@+id/btDraw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Draw"
+                android:padding="@dimen/margin_x"
+                android:textAllCaps="false"
+                android:layout_below="@id/actv_location"
+                android:layout_marginStart="@dimen/margin_x"
+                android:layout_marginTop="@dimen/margin_x"
+                android:background="@drawable/rect_curve_box"
+                android:textColor="@color/dark_grey"/>
+
+            <ImageView
+                android:id="@+id/mapView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/actv_location"
+                android:layout_marginTop="@dimen/margin_x"
+                android:layout_marginEnd="@dimen/margin_x"
+                android:padding="@dimen/margin_x"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:src="@drawable/map_type"
+                android:background="@drawable/round_bg_creame"/>
+        </RelativeLayout>
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <FrameLayout
+                android:id="@+id/fBottomSheet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/curvetop_sheet"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+                android:layout_gravity="bottom"
+                app:behavior_peekHeight="155dp"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivUp"
+                    android:layout_width="@dimen/margin_30"
+                    android:layout_height="@dimen/margin_xx"
+                    android:src="@drawable/arrow_upside"
+                    android:layout_marginTop="@dimen/margin_x"
+                    android:layout_gravity="center|top"
+                    app:tint="@color/dark_grey"
+                    />
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_xx"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvArea"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/margin_x"
+                            android:padding="@dimen/margin_x"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/font_13" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_x"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Select Vehicle"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_11_new" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_v"
+                            android:background="@drawable/rect_curve_white_box"
+                            android:orientation="vertical"
+                            android:padding="@dimen/margin_3">
+
+                            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                android:id="@+id/edVehicles"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="true"
+                                android:gravity="start"
+                                android:imeOptions="actionNext"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_v"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Area Name"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_11_new" />
+
+                        <EditText
+                            android:id="@+id/areaName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rect_curve_white_box"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="Enter area name"
+                            android:padding="@dimen/margin_v"
+                            android:paddingStart="@dimen/margin_x"
+                            android:paddingEnd="@dimen/margin_x"
+                            android:imeOptions="actionDone"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/med_grey"
+                            android:textSize="@dimen/font_11_new" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="@dimen/margin_30"
+                            android:layout_marginBottom="@dimen/margin_x"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/tvSaveFence"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/margin_30"
+                                android:layout_marginEnd="@dimen/margin_x"
+                                android:layout_weight="1"
+                                android:background="@drawable/rect_curve_box"
+                                android:backgroundTint="@color/red"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="center"
+                                android:paddingHorizontal="@dimen/margin_xx"
+                                android:paddingVertical="@dimen/margin_v"
+                                android:text="Save Fence"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_11_new" />
+
+                            <TextView
+                                android:id="@+id/tvReset"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/margin_x"
+                                android:layout_marginEnd="@dimen/margin_30"
+                                android:layout_weight="1"
+                                android:background="@drawable/rect_curve_box"
+                                android:backgroundTint="@color/red"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:paddingHorizontal="@dimen/margin_xx"
+                                android:paddingVertical="@dimen/margin_v"
+                                android:text="Reset"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_11_new" />
+
+
+                        </LinearLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.core.widget.NestedScrollView>
+
+
+            </FrameLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </RelativeLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

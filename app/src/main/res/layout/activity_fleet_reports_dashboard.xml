@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_cream">
+
+    <include layout="@layout/toolbar_layout"
+        android:id="@+id/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_x"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                android:weightSum="2">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvEWHReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_210"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/margin_v"
+                    android:layout_marginEnd="@dimen/margin_v"
+                    app:cardCornerRadius="@dimen/margin_25"
+                    app:cardUseCompatPadding="false"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardBackgroundColor="#ffe2e5">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_xx"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/margin_30"
+                            android:layout_height="@dimen/margin_30"
+                            android:backgroundTint="@color/black"
+                            android:src="@drawable/ewh"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Engine Working Hour Report"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/font_16"
+                            android:layout_marginTop="@dimen/margin_x"
+                            android:fontFamily="@font/poppins_bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total engine working hours by each harvestor"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/font_12"
+                            android:fontFamily="@font/poppins_regular"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="240 "
+                                android:textColor="@color/primary"
+                                android:textSize="@dimen/font_20"
+                                android:fontFamily="@font/poppins_bold"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Km"
+                                android:textColor="@color/primary"
+                                android:textSize="@dimen/font_18"
+                                android:fontFamily="@font/poppins_regular"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="By - CH-01-AA-0987"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/font_10"
+                            android:visibility="gone"
+                            android:fontFamily="@font/poppins_regular"/>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvTWH"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_210"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/margin_v"
+                    android:layout_marginEnd="@dimen/margin_v"
+                    app:cardCornerRadius="@dimen/margin_25"
+                    app:cardUseCompatPadding="false"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardBackgroundColor="#f3e7ff">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_xx"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/margin_30"
+                            android:layout_height="@dimen/margin_30"
+                            android:src="@drawable/twt"
+                            android:tint="@color/black"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thresher Working Hour Report"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/font_16"
+                            android:layout_marginTop="@dimen/margin_x"
+                            android:fontFamily="@font/poppins_bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total Threashing working hours by each harvestor"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/font_12"
+                            android:fontFamily="@font/poppins_regular"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="34 "
+                                android:textColor="@color/primary"
+                                android:textSize="@dimen/font_20"
+                                android:fontFamily="@font/poppins_bold"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="times"
+                                android:textColor="@color/primary"
+                                android:textSize="@dimen/font_18"
+                                android:fontFamily="@font/poppins_regular"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="By - CH-01-AA-0987"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/font_10"
+                            android:visibility="gone"
+                            android:fontFamily="@font/poppins_regular"/>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_x"
+                app:layout_constraintTop_toBottomOf="@+id/llOne"
+                android:weightSum="2">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvSummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_210"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/margin_25"
+                    android:layout_marginStart="@dimen/margin_v"
+                    android:layout_marginEnd="@dimen/margin_v"
+                    app:cardUseCompatPadding="false"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardBackgroundColor="#FFF4E0">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_xx"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/margin_30"
+                            android:layout_height="@dimen/margin_30"
+                            android:src="@drawable/monthly_round"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Summary\nReport"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/font_16"
+                            android:layout_marginTop="@dimen/margin_x"
+                            android:fontFamily="@font/poppins_bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Daily 24-Hour report of each harvestor"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/font_12"
+                            android:fontFamily="@font/poppins_regular"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CH-01-AA-0987 "
+                                android:textColor="@color/primary"
+                                android:textSize="@dimen/font_16"
+                                android:visibility="gone"
+                                android:fontFamily="@font/poppins_bold"/>
+                        </LinearLayout>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvHarvestorReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_210"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/margin_v"
+                    android:layout_marginEnd="@dimen/margin_v"
+                    app:cardCornerRadius="@dimen/margin_25"
+                    app:cardUseCompatPadding="false"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardBackgroundColor="#dbfce7">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_xx"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/margin_30"
+                            android:layout_height="@dimen/margin_30"
+                            android:src="@drawable/ic_tractor"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Harvestor Area Report"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/font_16"
+                            android:layout_marginTop="@dimen/margin_x"
+                            android:fontFamily="@font/poppins_bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Get report of harvested area"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/font_12"
+                            android:fontFamily="@font/poppins_regular"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_x"
+                app:layout_constraintTop_toBottomOf="@+id/llOne"
+                android:weightSum="2">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvDistance"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_210"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/margin_25"
+                    android:layout_marginStart="@dimen/margin_v"
+                    android:layout_marginEnd="@dimen/margin_v"
+                    app:cardUseCompatPadding="false"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardBackgroundColor="#FCE0FF">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_xx"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/margin_30"
+                            android:layout_height="@dimen/margin_30"
+                            android:src="@drawable/ic_distancereport"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Distance\nReport"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/font_16"
+                            android:layout_marginTop="@dimen/margin_x"
+                            android:fontFamily="@font/poppins_bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Daily 24-Hour report of distance covered by each harvestor"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/font_12"
+                            android:fontFamily="@font/poppins_regular"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CH-01-AA-0987 "
+                                android:textColor="@color/primary"
+                                android:textSize="@dimen/font_16"
+                                android:visibility="gone"
+                                android:fontFamily="@font/poppins_bold"/>
+                        </LinearLayout>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvManualAreaReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_210"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/margin_v"
+                    android:layout_marginEnd="@dimen/margin_v"
+                    app:cardCornerRadius="@dimen/margin_25"
+                    app:cardUseCompatPadding="false"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardBackgroundColor="#F3FCDB">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_xx"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/margin_30"
+                            android:layout_height="@dimen/margin_30"
+                            android:src="@drawable/ic_baseline_calculate_24"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Manual Area\nCalculator Report"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/font_16"
+                            android:layout_marginTop="@dimen/margin_x"
+                            android:fontFamily="@font/poppins_bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Get report of manually area calculated by you"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/font_12"
+                            android:fontFamily="@font/poppins_regular"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_x"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/llOne"
+                android:weightSum="2">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvSpeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_210"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/margin_25"
+                    android:layout_marginStart="@dimen/margin_v"
+                    android:layout_marginEnd="@dimen/margin_v"
+                    app:cardUseCompatPadding="false"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardBackgroundColor="#FFEBE0">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_xx"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/margin_30"
+                            android:layout_height="@dimen/margin_30"
+                            android:src="@drawable/speedometer_round"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Speed\nReport"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/font_16"
+                            android:layout_marginTop="@dimen/margin_x"
+                            android:fontFamily="@font/poppins_bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Daily 24-Hour report of speed achived by each harvestor"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/font_12"
+                            android:fontFamily="@font/poppins_regular"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CH-01-AA-0987 "
+                                android:textColor="@color/primary"
+                                android:textSize="@dimen/font_16"
+                                android:visibility="gone"
+                                android:fontFamily="@font/poppins_bold"/>
+                        </LinearLayout>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_210"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    android:layout_marginStart="@dimen/margin_v"
+                    android:layout_marginEnd="@dimen/margin_v"
+                    app:cardCornerRadius="@dimen/margin_25"
+                    app:cardBackgroundColor="#F3FCDB">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_xx"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/margin_30"
+                            android:layout_height="@dimen/margin_30"
+                            android:src="@drawable/ic_baseline_calculate_24"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Manual Area\nCalculator Report"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/font_16"
+                            android:layout_marginTop="@dimen/margin_x"
+                            android:fontFamily="@font/poppins_bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Get report of manually area calculated by you"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/font_12"
+                            android:fontFamily="@font/poppins_regular"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+</RelativeLayout>

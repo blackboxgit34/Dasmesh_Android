@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_x"
+        android:layout_below="@id/toolbar"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:cardCornerRadius="@dimen/margin_xx"
+        android:layout_marginTop="@dimen/margin_xx">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/margin_x"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_close"
+                app:tint="@color/dark_grey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v"
+                android:text="Set harvester's blade width"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin_x"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin_v"
+                android:textColor="@color/dark_grey"
+                android:textSize="18sp"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/spThreshers"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rect_curve_white_box"
+                android:layout_marginHorizontal="@dimen/margin_x"
+                android:layout_marginTop="@dimen/margin_xx"
+                android:textColor="@color/black"
+                android:paddingStart="@dimen/margin_x"
+                android:hint="Search Thresher Models"
+                android:textColorHint="@color/dark_grey"
+                android:backgroundTint="@color/med_grey"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/spVehicles"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rect_curve_white_box"
+                android:layout_marginHorizontal="@dimen/margin_x"
+                android:layout_marginTop="@dimen/margin_x"
+                android:textColor="@color/black"
+                android:paddingStart="@dimen/margin_x"
+                android:hint="Search Vehicle"
+                android:textColorHint="@color/dark_grey"
+                android:backgroundTint="@color/med_grey"/>
+
+            <TextView
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_curve_box"
+                android:layout_marginHorizontal="@dimen/margin_50"
+                android:layout_marginTop="@dimen/margin_30"
+                android:layout_marginBottom="@dimen/margin_30"
+                android:backgroundTint="@color/red"
+                android:text="SAVE"
+                android:textAlignment="center"
+                android:padding="@dimen/margin_x"
+                android:textColor="@color/white"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
